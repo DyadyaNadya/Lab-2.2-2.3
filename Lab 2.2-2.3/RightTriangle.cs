@@ -10,7 +10,7 @@ public class RightTriangle
         {
             if (value <= 0)
             {
-                throw new ArgumentException("Длина катета должна быть положительным числом.");
+                throw new ArgumentException("Р”Р»РёРЅР° РєР°С‚РµС‚Р° РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј С‡РёСЃР»РѕРј.");
             }
             a = value;
         }
@@ -23,45 +23,45 @@ public class RightTriangle
         {
             if (value <= 0)
             {
-                throw new ArgumentException("Длина катета должна быть положительным числом.");
+                throw new ArgumentException("Р”Р»РёРЅР° РєР°С‚РµС‚Р° РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј С‡РёСЃР»РѕРј.");
             }
             b = value;
         }
     }
 
-    // Конструктор с параметрами
+    // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
     public RightTriangle(double a, double b)
     {
         A = a;
         B = b;
     }
 
-    //Конструктор по умолчанию
+    //РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
     public RightTriangle()
     {
         A = 2;
         B = 3;
     }
-    // Конструктор копирования
+    // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
     public RightTriangle(RightTriangle other)
     {
         A = other.A + 2;
         B = other.B + 5;
     }
 
-    // Метод для вычисления площади треугольника
+   // РњРµС‚РѕРґ РґР»СЏ РІС‹С‡РёСЃР»РµРЅРёСЏ РїР»РѕС‰Р°РґРё С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°
     public double CalculateArea()
     {
         return (A * B) / 2;
     }
 
-    //Перегрузка оператора ++
+   //РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° ++
     public static RightTriangle operator ++(RightTriangle triangle)
     {
         return new RightTriangle(triangle.A * 2, triangle.B * 2);
     }
 
-    //Перегрузка оператора --
+    //РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° --
     public static RightTriangle operator --(RightTriangle triangle)
     {
         return new RightTriangle(triangle.A / 2, triangle.B / 2);
@@ -77,7 +77,7 @@ public class RightTriangle
         return triangle.A > 0 && triangle.B > 0;
     }
 
-    // Бинарные операции для сравнения площадей треугольников
+    // Р‘РёРЅР°СЂРЅС‹Рµ РѕРїРµСЂР°С†РёРё РґР»СЏ СЃСЂР°РІРЅРµРЅРёСЏ РїР»РѕС‰Р°РґРµР№ С‚СЂРµСѓРіРѕР»СЊРЅРёРєРѕРІ
     public static bool operator <=(RightTriangle t1, RightTriangle t2)
     {
         return t1.CalculateArea() <= t2.CalculateArea();
@@ -87,10 +87,10 @@ public class RightTriangle
     {
         return t1.CalculateArea() >= t2.CalculateArea();
     }
-    // Перегрузка метода ToString
+     // РџРµСЂРµРіСЂСѓР·РєР° РјРµС‚РѕРґР° ToString
     public override string ToString()
     {
-        return $"Катет A: {A}, Катет B: {B}, Площадь: {CalculateArea()}";
+        return $"РљР°С‚РµС‚ A: {A}, РљР°С‚РµС‚ B: {B}, РџР»РѕС‰Р°РґСЊ: {CalculateArea()}";
     }
 }
 
